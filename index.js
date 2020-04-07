@@ -26,7 +26,7 @@ const args = message.content.slice(prefix.length).trim().split(/ +/g);
 const command = args.shift().toLowerCase();
 
     if (message.channel.type !== 'text') return;
-    if (message.member.hasPermission('MANAGE_GUILD') || message.member.hasPermission('ADMINISTRATOR') {
+    if (message.member.hasPermission('MANAGE_GUILD') || message.member.hasPermission('ADMINISTRATOR') || message.member.id === message.guild.owner.id) {
         if (message.content === '!stop') {stop.push(message.guild.id); return message.channel.send('Готово');}
         if (message.content === '!start') {stop.splice(stop.indexOf(message.guild.id),1); return message.channel.send('Готово');}
         
