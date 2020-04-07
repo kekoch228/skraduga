@@ -30,7 +30,7 @@ bot.on('message', (message) => {
         if (message.content === 'z!start') {stop.splice(stop.indexOf(message.guild.id),1); return message.channel.send('Готово');}
         
         
-     }    
+         
 });
 
 bot.login(process.env.BOT_TOKEN);
