@@ -15,7 +15,7 @@ async function color () {
         })
     }, 1500).then(color);
 }
-bot.on('ready', () => 
+bot.on('ready', () => {
     color();
     bot.user.setPresence({ game: { name: `на радугу`, type: 3 } }).catch();
 });
